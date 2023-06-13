@@ -1,0 +1,170 @@
+/* 400 */
+@media screen and (min-width: 20em) {
+
+    #section-form .form-container form {
+        padding: 18px 12px;
+    }
+}
+
+@media screen and (min-width: 25em) {
+
+    .video-frame iframe {
+        width: 35.0rem;
+        height: 20.0rem;
+        border: 6px solid;
+        border-image: linear-gradient(var(--primary-color),
+                var(--primary-color-contrast));
+        border-image-slice: 10;
+    }
+
+    #section-stranger-things-gallery .gallery-container ul li img {
+        width: 30.0rem;
+        outline: 14px solid var(--highlight-color);
+        border: 4px solid var(--primary-color);
+    }
+
+    #section-form .form-container form {
+        padding: 18px 22px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 1.6rem;
+    }
+}
+
+/* 480 */
+@media screen and (min-width: 30em) {
+
+    header .header-content img {
+        margin-top: 2.0rem;
+        width: 30.0rem;
+    }
+
+    #bottom-characters {
+        height: 48.0rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 3.0rem;
+        margin-bottom: 4.4rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    h1,
+    h2 {
+        font-size: 4.8rem;
+        margin-bottom: 4.0rem;
+    }
+
+    header .header-content img {
+        margin-top: 2.0rem;
+        width: 48.0rem;
+    }
+
+    #bottom-characters {
+        height: 60.0rem;
+    }
+
+    .section-texts {
+        max-width: 50.0rem;
+    }
+
+    main {
+        padding: 0 3.0rem;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 450px;
+    }
+
+    /* SECTION 01 */
+    #section-inverted-world .section-texts {
+        text-align: left;
+    }
+
+    #section-inverted-world .section-texts h1{
+        width: 32.0rem;
+    }
+
+    #section-inverted-world img {
+        margin-top: 3.5rem;
+        width: 30%;
+    }
+
+        /* SECTION 02 */
+        #section-stranger-things-trailer {
+            flex-direction: row-reverse;
+        }
+        #section-stranger-things-trailer .section-texts {
+            text-align: right;
+            width: 100%;
+            max-width: 54.0rem;
+        }
+    
+        #section-stranger-things-trailer .section-texts h2 {
+            font-size: 4.2rem;
+        }
+    
+        .video-frame iframe {
+            width: 40.0rem;
+            height: 22.0rem;
+        }
+
+        /* SECTION 03 */
+        #section-stranger-things-gallery {
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: 10.0rem;
+        }
+
+        #section-stranger-things-gallery .section-texts {
+            text-align: left;
+            max-width: 80.0rem;
+        }
+        
+        #section-stranger-things-gallery .gallery-container ul {
+            display: flex;
+            gap: 40px;
+        }
+        
+        #section-stranger-things-gallery .gallery-container ul li img {
+            width: 28.0rem;
+            height: 23.0rem;
+            outline: 12px solid var(--highlight-color);
+            border: 3px solid var(--primary-color);
+            object-fit: cover;
+        }
+
+        /* SECTION 04 */
+        #section-form {
+            text-align: left;
+            height: 750px;
+        }
+
+        #section-form .form-content {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #section-form .form-content h2 {
+            max-width: 40.0rem;
+        }
+
+        #section-form .form-container form {
+            padding: 30px 60px;
+        }
+}
