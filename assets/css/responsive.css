@@ -42,6 +42,10 @@
         width: 30.0rem;
     }
 
+    header .header-content button {
+        width: 22.0rem;
+    }
+
     #bottom-characters {
         height: 48.0rem;
     }
@@ -110,7 +114,7 @@
         #section-stranger-things-trailer .section-texts {
             text-align: right;
             width: 100%;
-            max-width: 54.0rem;
+            max-width: 50.0rem;
         }
     
         #section-stranger-things-trailer .section-texts h2 {
@@ -161,7 +165,7 @@
         }
 
         #section-form .form-content h2 {
-            max-width: 40.0rem;
+            max-width: 43.0rem;
         }
 
         #section-form .form-container form {
