@@ -1,1 +1,236 @@
 @import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+:root {
+    --primary-color: #cf0f0f;
+    --primary-color-contrast: #fff;
+    --field-background-color: #000;
+}
+
+.light-theme {
+    --page-background: linear-gradient(180deg, #fff 0%, #fff 65%, rgba(255, 255, 255, 0.75) 100%);
+    --header-background-color: #e3e3e3;
+    --highlight-color: #000;
+    --featured-font-family: "Archivo", sans-serif;
+    --character-top-image-src: url("../img/characters/kids-on-the-bike.svg");
+    --character-top-image-color: #fff;
+    --character-bottom-image-src: url("../img/characters/inverted-world-monster.svg");
+    --character-bottom-image-color: #e5e5e5;
+    --background-lamp-image: url("../img/backgrounds/lamps.png");
+    --footer-background-color: #b5bbbf;
+}
+
+body {
+    background: var(--page-background);
+}
+
+img {
+    width: 200px;
+}
+
+/* GENERIC STYLES */
+h1,
+h2 {
+    font-family: var(--featured-font-family);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-bottom: 4.0rem;
+}
+
+p {
+    color: var(--highlight-color);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.4rem;
+}
+
+/* HEADER STYLES*/
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--header-background-color);
+}
+
+header::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/banner/florest.webp);
+    background-size: cover;
+    background-position: center 90%;
+    background-repeat: no-repeat;
+    filter: saturate(0);
+    opacity: 0.2;
+}
+
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70.0rem;
+    gap: 4.5rem;
+    z-index: 2;
+}
+
+header .header-content img {
+    margin-top: 5.0rem;
+    width: 85%;
+}
+
+header .header-content p {
+    padding: 1.0rem;
+    text-align: center;
+}
+
+header .header-content button {
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: var(--featured-font-family);
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 1.6rem;
+    width: 20.0rem;
+    height: 4.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background .5s;
+}
+
+header .header-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+}
+
+/* WORLD CHARACTERS */
+.world-characters {
+    width: 100%;
+    max-width: 90.0rem;
+    position: absolute;
+}
+
+#top-characters {
+    height: 100%;
+    background-color: var(--character-top-image-color);
+    mask: var(--character-top-image-src) bottom / 100% no-repeat;
+    -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+    bottom: -3px;
+}
+
+#bottom-characters {
+    height: 28.0rem;
+    transform: rotateZ(180deg) scaleX(-1);
+    background-color: var(--character-bottom-image-color);
+    position: relative;
+    mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+    -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+    top: 3px;
+}
+
+/* MAIN STYLES */
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.0rem;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.0rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 120.0rem;
+}
+
+/* SECTION 01 STYLES */
+#section-inverted-world .section-texts {
+    text-align: center;
+}
+
+#section-inverted-world img {
+    margin-top: 3.5rem;
+    width: 25.0rem;
+}
+
+/* SECTION 02 STYLES */
+#section-stranger-things-trailer .section-texts {
+    text-align: center;
+}
+
+#section-stranger-things-trailer .section-texts p {
+    margin-bottom: 3.5rem;
+}
+
+.video-frame {
+    /* background-color: var(--primary-color); */
+}
+
+.video-frame iframe {
+    border: 3px solid;
+    border-image: linear-gradient(var(--primary-color),
+            var(--primary-color-contrast));
+    border-image-slice: 10;
+}
+
+/* SECTION 03 STYLES */
+#section-stranger-things-gallery .section-texts {
+    text-align: center;
+}
+
+#section-stranger-things-gallery .gallery-container ul li {
+    margin-bottom: 3.0rem;
+}
+
+#section-stranger-things-gallery .gallery-container ul li img {
+    width: 25.0rem;
+    outline: 12px solid var(--highlight-color);
+    border: 3px solid var(--primary-color);
+}
+
+/* FOOTER STYLES */
+footer {
+    padding: 5.0rem 0 9.0rem 0;
+    background-color: var(--footer-background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    max-width: 70.0rem;
+}
+
+footer::before,
+footer::after {
+    content: "";
+    width: 110px;
+    height: 80px;
+    background: url("../img/footer/tape.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+}
+
+footer::before {
+    left: -45px;
+    transform: rotateZ(-10deg);
+}
+
+footer::after {
+    right: -45px;
+    transform: rotateZ(10deg);
+}
