@@ -74,6 +74,40 @@
                 </ul>
             </div>
         </section>
+
+        <section id="section-form" class="container">
+            <div class="form-content">
+                <h2>Join the D&D Club and have <span>otherworldly adventures.</span></h2>
+
+                <div class="form-container">
+                    <form>
+                        <label for="character-name">Character Name:</label>
+                        <input type="text" id="character-name" name="character-name">
+
+                        <label for="character-age">Character Age:</label>
+                        <input type="number" id="character-age" name="character-age" min="0" max="200">
+
+                        <label for="character-gender">Character Gender:</label>
+                        <select id="character-gender" name="character-gender">
+                            <option value="none"></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="character-race">Character Race:</label>
+                        <input type="text" id="character-race" name="character-race">
+
+                        <label for="character-description">Character Description:</label>
+                        <textarea id="character-description" name="character-description" cols="30"
+                            rows="10"></textarea>
+
+                        <button type="button" id="btnSubscribe">subscribe</button>
+                    </form>
+                    <script type="module" src="assets/js/main.js"></script>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
